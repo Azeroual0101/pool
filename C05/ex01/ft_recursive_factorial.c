@@ -1,0 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abdazero <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/27 14:48:43 by abdazero          #+#    #+#             */
+/*   Updated: 2025/08/01 20:38:11 by abdazero         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unistd.h>
+
+int	ft_recursive_factorial(int nb)
+{
+	int	fact;
+
+	fact = 1;
+	if (nb < 0)
+		return (0);
+	if (nb == 0)
+		return (1);
+	fact = nb * ft_recursive_factorial(nb -1);
+	return (fact);
+}
